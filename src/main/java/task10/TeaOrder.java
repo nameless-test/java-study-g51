@@ -21,7 +21,7 @@ public class TeaOrder extends Order {
         } else if ("Black".equals(teaType)) {
             return 30;
         } else {
-            throw new java.lang.Error("Incorrect size. Try: \"White, Green, Large\"");
+            throw new java.lang.Error("Incorrect size. Try: \"White, Green, Black\"");
         }
     }
 
