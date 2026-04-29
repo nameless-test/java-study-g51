@@ -38,6 +38,7 @@ public abstract class Order implements Printable, Priceable {
     public String toString() {
         return "Order #" + getOrderNumber() + " (" + getOrderStatus() + ")";
     }
+//Методи інтерфейсів імплементовані у дочірніх класах
 
     public Order() {
         this.orderNumber = counter;

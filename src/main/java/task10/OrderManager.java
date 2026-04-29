@@ -23,7 +23,7 @@ public class OrderManager {
             }
             return sumOfOrders;
         }
-        throw new NoOrdersException(orders);
+        throw new NoOrdersException();
     }
 
     public void addOrder(Order order) {

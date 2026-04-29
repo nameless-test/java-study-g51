@@ -1,0 +1,10 @@
+target/
+*.class
+*.jar
+*.war
+.vscode/
+*.log
+logs/
+temp/
+*.iml
+*.iws
