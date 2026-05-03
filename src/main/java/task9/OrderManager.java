@@ -1,4 +1,4 @@
-package task10;
+package task9;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,22 +14,17 @@ public class OrderManager {
 
     public double calculateTotal(List<Order> orders) {
         double sumOfOrders = 0;
-        if (!orders.isEmpty()) {
-            for (Order n : orders) {
-                if ("NEW".equals(n.getOrderStatus())) {
-                    double price = n.getPrice();
-                    sumOfOrders = sumOfOrders + price;
-                }
+        for (Order n : orders) {
+            if ("NEW".equals(n.getOrderStatus())) { 
+                double price = n.getPrice();
+                sumOfOrders = sumOfOrders + price;
             }
-            return sumOfOrders;
         }
-        throw new NoOrdersException(orders);
+        System.out.print("Total sum: ");
+        return sumOfOrders;
     }
 
     public void addOrder(Order order) {
-        if (ordersList.contains(order)) {
-            throw new DuplicateOrderException(order.getOrderNumber());
-        }
         ordersList.add(order);
     }
 
@@ -37,24 +32,22 @@ public class OrderManager {
         boolean removed = ordersList.removeIf(e -> e.getOrderNumber() == orderNumber);
 
         if (!removed) {
-            throw new OrderNotFoundException(orderNumber);
+            System.out.println(orderNumber + " is incorrect number for order");
         }
-
     }
 
     public Order findOrderByNumber(int orderNumber) {
-        for (Order e : ordersList) {
+        for (Order e: ordersList) {
             if (e.getOrderNumber() == orderNumber) {
                 return e;
             }
         }
-
-        throw new OrderNotFoundException(orderNumber);
+        return null;
     }
 
-    public List<Order> getOrdersByStatus(String status) {
+    public List<Order> getOrdersByStatus (String status) {
         List<Order> ordersListByStatus = new java.util.ArrayList<>();
-        for (Order e : ordersList) {
+        for (Order e: ordersList) {
             if (status.equals(e.getOrderStatus())) {
                 ordersListByStatus.add(e);
             }
@@ -63,7 +56,7 @@ public class OrderManager {
     }
 
     public Map<String, Integer> getOrderTypeCounts() {
-        Map<String, Integer> ordersCountByType = new HashMap<>();
+        Map<String, Integer> ordersCountByType = new HashMap<>(); 
 
         int coffeeOrdersCount = 0;
         int teaOrdersCount = 0;
@@ -72,9 +65,11 @@ public class OrderManager {
         for (Order n : ordersList) {
             if ("CoffeeOrder".equals(n.getClass().getSimpleName())) {
                 coffeeOrdersCount++;
-            } else if ("TeaOrder".equals(n.getClass().getSimpleName())) {
+            }
+            else if ("TeaOrder".equals(n.getClass().getSimpleName())) {
                 teaOrdersCount++;
-            } else if ("DessertOrder".equals(n.getClass().getSimpleName())) {
+            }
+            else if ("DessertOrder".equals(n.getClass().getSimpleName())) {
                 dessertOrdersCount++;
             }
         }
@@ -85,6 +80,5 @@ public class OrderManager {
 
         return ordersCountByType;
     }
-
     
 }
