@@ -3,6 +3,7 @@ package task13;
 import static java.lang.String.format;
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,6 +23,9 @@ public class CatalogCount {
             int catalogElementsCount = catalogElements.size();
 
             System.out.println(format("Catalog elements count = %s", catalogElementsCount));
+
+
+            Assert.assertTrue("Incorrect number of elements in catalog ", catalogElementsCount==20);
 
         } finally {
             driver.quit();
