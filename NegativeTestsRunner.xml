@@ -10,9 +10,9 @@
         </groups>
 
         <classes>
-            <class name="task17.CategorySearch"/>
-            <class name="task17.SecondClass"/>
-            <class name="task17.ThirdClass"/>
+            <class name="task17.ProductsSearch"/>
+            <class name="task17.SiteOptions"/> 
+            <class name="task17.DarkMode"/>
         </classes>
         
     </test>

@@ -15,7 +15,7 @@ public class BaseTest {
     protected WebDriver driver;
     protected Wait<WebDriver> wait;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void browserSetUp () {
         EdgeOptions options = new EdgeOptions();
         options.addArguments("--headless=new");
@@ -28,7 +28,7 @@ public class BaseTest {
                 .ignoring(Exception.class);
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void browserClosing () {
         if (driver != null) {
             driver.close();
