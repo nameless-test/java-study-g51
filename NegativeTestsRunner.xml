@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Negative Suite">
+    <test name="Only Negative">
+        
+        <groups>
+            <run>
+                <include name="negative"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="task17.CategorySearch"/>
+            <class name="task17.SecondClass"/>
+            <class name="task17.ThirdClass"/>
+        </classes>
+        
+    </test>
+</suite>
