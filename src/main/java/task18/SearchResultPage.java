@@ -6,11 +6,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 
-public class SearchResultPage {
+public class SearchResultPage extends BasePage {
 
-    private Wait<WebDriver> wait;
+    public SearchResultPage(WebDriver driver) {
+        super(driver);
+    }
 
     public int getCategoryTypesCount() {
         List<WebElement> categoryTypes = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class=\"category-navigation content\"]//li")));
@@ -18,7 +19,4 @@ public class SearchResultPage {
         return countOfCategories;
     }
 
-    public SearchResultPage(Wait<WebDriver> wait) {
-        this.wait = wait;
-    }
 }

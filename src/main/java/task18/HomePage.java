@@ -6,12 +6,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 
-public class HomePage {
+public class HomePage extends BasePage {
 
-    private WebDriver driver;
-    private Wait<WebDriver> wait;
+    public HomePage(WebDriver driver) {
+        super(driver);
+    }
 
     public void goToHomePage() {
         driver.get("https://hotline.ua/");
@@ -38,10 +38,5 @@ public class HomePage {
 
     public void goToCategoryPage(String categoryName) {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(String.format("//a[@data-eventlabel=\"%s\"]", categoryName)))).click();
-    }
-
-    public HomePage(WebDriver driver, Wait<WebDriver> wait) {
-        this.driver = driver;
-        this.wait = wait;
     }
 }

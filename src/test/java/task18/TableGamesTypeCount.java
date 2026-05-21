@@ -8,8 +8,8 @@ public class TableGamesTypeCount extends BaseTest {
     @Test(groups = {"positive"})
     public void TableGamesCountCheck() {
         int expectedResult = 9;
-        HomePage homePage = new HomePage(getDriver(), getWait());
-        SearchResultPage srp = new SearchResultPage(getWait());
+        HomePage homePage = new HomePage(getDriver());
+        SearchResultPage srp = new SearchResultPage(getDriver());
 
         homePage.goToHomePage();
         homePage.goToCategoryPage("Дача, сад");

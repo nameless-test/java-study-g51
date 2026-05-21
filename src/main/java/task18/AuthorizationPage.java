@@ -4,11 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 
-public class AuthorizationPage {
+public class AuthorizationPage extends BasePage {
 
-    private Wait<WebDriver> wait;
+    public AuthorizationPage(WebDriver driver) {
+        super(driver);
+    }
 
     public String[] getSingInOptions() {
         WebElement buttonArea = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"social-login__buttons-container\"]")));
@@ -17,10 +18,6 @@ public class AuthorizationPage {
             buttonArea.findElement(By.xpath(".//button[3]")).getText().trim()
         };
         return actualResult;
-    }
-
-    public AuthorizationPage(Wait<WebDriver> wait) {
-        this.wait = wait;
     }
 
 }

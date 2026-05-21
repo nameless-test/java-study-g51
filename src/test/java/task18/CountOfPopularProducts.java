@@ -6,8 +6,8 @@ import org.testng.annotations.Test;
 public class CountOfPopularProducts extends BaseTest {
 
     @Test(groups = {"positive"})
-    public void TableGames() throws InterruptedException {
-        HomePage homePage = new HomePage(getDriver(), getWait());
+    public void TableGames() {
+        HomePage homePage = new HomePage(getDriver());
         homePage.goToHomePage();
         homePage.seeMoreProducts();
         int expectedResult = homePage.countOfPopularProducts();

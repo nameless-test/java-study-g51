@@ -8,8 +8,8 @@ public class SingInOptions extends BaseTest {
     @Test(groups = {"positive"})
     public void checkSingInOptions() {
         String[] expectedResult = {"Продовжити через Google", "Продовжити через Apple", "Продовжити через Facebook"};
-        HomePage homePage = new HomePage(getDriver(), getWait());
-        AuthorizationPage authorizationPage = new AuthorizationPage(getWait());
+        HomePage homePage = new HomePage(getDriver());
+        AuthorizationPage authorizationPage = new AuthorizationPage(getDriver());
 
         homePage.goToHomePage();
         homePage.goToAuthorizationPage();
