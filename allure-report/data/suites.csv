@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","5873","changeTheme","Default Suite","2026-05-25","failed","2026-05-25","task19.DarkMode","TestNGTest-152b6bfb-7c1f-49ab-933a-61e0088e8138","task19.DarkMode","changeTheme"
+"Counts the number of categories on main page","6934","categoriesCount","Default Suite","2026-05-25","broken","2026-05-25","task19.CountOfPopularProducts","TestNGTest-152b6bfb-7c1f-49ab-933a-61e0088e8138","task19.CountOfPopularProducts","categoriesCount"
+"","6664","tableGamesCountCheck","Default Suite","2026-05-25","broken","2026-05-25","task19.TableGamesTypeCount","TestNGTest-152b6bfb-7c1f-49ab-933a-61e0088e8138","task19.TableGamesTypeCount","tableGamesCountCheck"
+"","11905","checkSingInOptions","Default Suite","2026-05-25","passed","2026-05-25","task19.SingInOptions","TestNGTest-152b6bfb-7c1f-49ab-933a-61e0088e8138","task19.SingInOptions","checkSingInOptions"
