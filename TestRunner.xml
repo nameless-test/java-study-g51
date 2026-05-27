@@ -5,9 +5,10 @@
     
     <test name="Run All Tests">
         <classes>
-            <class name="task17.ProductsSearch"/>
-            <class name="task17.SiteOptions"/> 
-            <class name="task17.DarkMode"/>
+            <class name="task19.CountOfPopularProducts"/>
+            <class name="task19.SingInOptions"/> 
+            <class name="task19.TableGamesTypeCount"/>
+            <class name="task19.DarkMode"/>
         </classes>
     </test>
     
