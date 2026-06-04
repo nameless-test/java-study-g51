@@ -38,6 +38,18 @@
             <version>2.34.0</version>
             <scope>compile</scope> 
         </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>6.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.22.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
