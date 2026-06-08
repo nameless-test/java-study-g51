@@ -1,13 +1,17 @@
 package task20;
 
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
 import task20.DTO.NotFoundDto;
 
 public class GetPetTest {
 
-    public void petExist(int id) {
+    @Test
+    public void petExist() {
+        int id = 232323;
+
         ApiMethods api = new ApiMethods();
 
         Response info = api.getPet(id);

@@ -1,5 +1,6 @@
 package task20;
 
+import org.junit.Test;
 import org.testng.Assert;
 
 import io.restassured.response.Response;
@@ -7,7 +8,11 @@ import task20.DTO.PetDto;
 
 public class PutPetTests {
 
-    public void verifyPetCanBeModified (String name, int id) {
+    @Test
+    public void verifyPetCanBeModified () {
+
+        String name = "TestName";
+        int id = 6564;
 
         ApiMethods api = new ApiMethods();
 

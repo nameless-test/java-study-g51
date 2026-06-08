@@ -1,12 +1,15 @@
 package task20;
 
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
 
 public class DeletePetTest {
 
-    public void deletePet (int id) {
+    @Test
+    public void deletePet () {
+        int id = 232323;
         ApiMethods api = new ApiMethods();
 
         Response info = api.deletePet(id, "special-key");
